@@ -12,6 +12,7 @@ Computer Vision is one of the booming technologies that AI engineers are working
 
 #### Problem Statement
 Syncope is a type of condition where the blood flow slows down, leading to in home fainting. A lot of times people stay alone and unfortunately if they faint, no one will realise, leading to late medications. The statistics below shows that how the syncope rate for adults is more, especially the older population. </br> 
+![image](https://github.com/user-attachments/assets/992f35de-7db6-4e0f-8f09-d1aec43bc269)
 
 About 30 – 40% of adults experience a fall related injury in their homes. Not only this, about 35 – 40% of fainting episodes lead to injuries that require immediate medical attention. </br>
 Looking at the statistics, I feel that this issue must be taken into deep consideration and addressed. Also, while addressing the issue, conditions like accuracy and quicker messaging must also be taken into consideration.
