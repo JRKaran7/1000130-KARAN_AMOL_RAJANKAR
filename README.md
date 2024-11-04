@@ -30,7 +30,7 @@ Here is how the Software Development Life Cycle (SDLC) helped me create the fain
  
 #### 2.	Defining: -
 •	Required Python computer vision, media pipe and WhatsApp message coding experience. I learned about it through many YouTube videos and websites like GeeksForGeeks, Java Tutorials, etc. <br>
-•	I used websites like vector images and Shutterstock to download different sitting, standing, and fainting videos. Added 15 videos for each pose to increase accuracy. 
+•	I used websites like vector images and Shutterstock to download different sitting, standing, and fainting videos. Added 15 videos for each pose to increase accuracy. <br>
 •	I asked ChatGPT to provide the different points of the body to detect three different poses. <br>
 •	Finally, understood the use of pywhatkit for the code to send the WhatsApp message to the provided number. This will be the final output of the code. <br>
  
