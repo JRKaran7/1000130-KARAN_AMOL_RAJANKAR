@@ -48,7 +48,7 @@ Having discussed this with my teachers and family members, I found that there ar
 I tested my system by introducing it to my peers, teachers, and family members. They found the idea and the system quite interesting, and they all agreed that the system has a greater scope in the future. Finally, I introduced a feedback survey to make sure that the system was fulfilling the objective. <br>
  
 #### 5. Model Deployment: -
-•	Presented the faint detection system code in a GitHub repository to understand the code. <br>
+•	The entire code is uploaded in Github for the users to understand the code and gain insights from it.<br>
 •	Along with this, a detailed ReadMe file includes screenshots of the output and the frame window. <br>
 
 ### Detailed Understanding about the code
@@ -68,7 +68,6 @@ Once the data is trained, it is tested on the test dataset and the accuracy is c
 
 #### Model Deployment
 Finally, the main code is the file where we load the pretrained model and begin detecting real time poses. If there is a faint detected, the model uses PyWhatKit to immediately open WhatsApp and send a message to the provided number in the code. <br>
-The entire code is uploaded in Github for the users to understand the code and gain insights from it.
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
