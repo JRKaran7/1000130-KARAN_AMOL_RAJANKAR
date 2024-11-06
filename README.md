@@ -1,9 +1,10 @@
 # Developing a Computer Vision-Based Detection System using Machine Learning
-## Faint Detection System
+## Scenario 2: - Computer vision based Human Pose Detection System
+## Name of the Project: - Faint Detection System
 
 Student ID: - 1000130 <br>
 Karan Amol Rajankar </br>
-Delhi Public School – Bangalore North </br>
+Delhi Public School Bangalore North </br>
 Email ID: - karan.rajankar07@gmail.com </br>
 
 ### Introduction
@@ -57,14 +58,16 @@ To train the model with the proper frames extracted from videos, I have taken vi
 
 #### Data preprocessing and Exploratory Data Analysis (EDA)
 This process is applicable for both model training and real time detection. <br>
-• For the model training, we defined a function that can process every single video. Once the function is called, it takes in the video from the video path. An empty list features[] will be used to store the landmark values. We then check whether the model can process the video. If yes, then the process begins. First, a loop is created that processes every frame of the video. The frame is then converted to RGB and is processed by the pose class from mediapipe to detect any body landmarks. If the pose detects landmarks, then it begins extracting 15 different body landmarks. Once this is done, the model then flattens the vectors for the machine learning model to process. Now this will then be appended in the features[] list and frame count increases by 1. This whole process is looped over all videos of the dataset. Finally the dataset is split into training and test set with a ratio of 80:20 <br>
+• For the model training, we defined a function that can process every single video. Once the function is called, it takes in the video from the video path. An empty list features[] will be used to store the landmark values. We then check whether the model can process the video. If yes, then the process begins. First, a loop is created that processes every frame of the video. The frame is then converted to RGB and is processed by the pose class from mediapipe to detect any body landmarks. If the pose detects landmarks, then it begins extracting 15 different body landmarks. Once this is done, the model then flattens the vectors for the machine learning model to process. Now this will then be appended in the features[] list and frame count increases by 1. This whole process is looped over all videos of the dataset. Finally the dataset is split into training and test set with a ratio of 80:20. <br>
 • For the real time detection, a conditional statement about whether the frame is running or not is compiled. Then a loop runs over each frame. Similar landmarks are drawn after converting the frame to RGB. Then, the vectors are flattened and predictions are made.
 
 #### Model Selection and Training
-Once the data is preprocessed, we take in three different classification models to examine which one is better. For extracting features mediapipe was used. But for the predictions, we will choosing from DecisionTreeClassifier, RandomForestClassifier, and K Nearest Neighbors. We train it with the training data collected from the dataset. 
+Once the data is preprocessed, we take in three different classification models to examine which one is better. For extracting features mediapipe was used. But for the predictions, we will choosing from DecisionTreeClassifier, RandomForestClassifier, and K Nearest Neighbors. We train it with the training data collected from the dataset.
+![image](https://github.com/user-attachments/assets/f626ff50-41c4-404f-a522-89735c39ac52)
 
 #### Model Evaluation and Testing
 Once the data is trained, it is tested on the test dataset and the accuracy is checked. The model with the best accuracy will be chosen and will be dumped as a permanent pretrained model that can be used without the need of processing it again.
+![image](https://github.com/user-attachments/assets/3c1ddd05-734e-4b64-84a1-c2786e37ded7)
 
 #### Model Deployment
 Finally, the main code is the file where we load the pretrained model and begin detecting real time poses. If there is a faint detected, the model uses PyWhatKit to immediately open WhatsApp and send a message to the provided number in the code. <br>
