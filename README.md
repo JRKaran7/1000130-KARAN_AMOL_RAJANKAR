@@ -113,6 +113,8 @@ This system can be made much better by introducing it in the public surveillance
 ### Conclusion
 While coding this faint detection system, I learnt about how Python can be used to code computer vision applications to create systems for fulfilling basic necessities in society. I also learnt about how to provide a proper dataset as all the videos were put in a list. So, the best videos were found by surfing through the internet. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
 
+### PPT Link
+https://www.canva.com/design/DAGWJt5h7O0/W7nnbCF_XAAMC00j8nf63A/view?utm_content=DAGWJt5h7O0&utm_campaign=designshare&utm_medium=link&utm_source=editor
 ### Bibliography
 • (No date) Mike Krieger: Computer vision and machine learning have... Available at: https://www.brainyquote.com/quotes/mike_krieger_752102 (Accessed: 11 November 2024). <br>
 • Signs, causes, and treatment of syncope (fainting): Rwjbarnabas Health NJ (no date) RWJBarnabas Health. Available at: https://www.rwjbh.org/treatment-care/heart-and-vascular-care/diseases-conditions/syncope-fainting-/ (Accessed: 11 November 2024). <br>
