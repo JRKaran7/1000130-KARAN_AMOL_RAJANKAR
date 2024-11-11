@@ -20,7 +20,7 @@ About 30 – 40% of adults experience a fall related injury in their homes. Not 
 Looking at the statistics, I feel that this issue must be taken into deep consideration and addressed. Also, while addressing the issue, conditions like accuracy and quicker messaging must also be taken into consideration.
 
 ### Goal and Objective
-To develop a system that can detect multiple poses but alerts the closest family member if the model detects the target user facing a fainting episode.
+To develop a system that can detect a person standing, walking, sitting, and fainting. Along with this, the system should alert the closest family member if the model detects the target user facing a fainting episode.
 
 ### Existing projects
 1. Wait Kit Wong: - https://www.researchgate.net/publication/228792571_Home_Alone_Faint_Detection_Surveillance_System_Using_Thermal_Camera <br>
