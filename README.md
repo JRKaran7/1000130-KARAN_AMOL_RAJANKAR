@@ -59,6 +59,19 @@ Forms Response Sheet: - https://docs.google.com/spreadsheets/d/171L4dBcxADU1JaSF
 •	The entire code is uploaded in Github for the users to understand the code and gain insights from it.<br>
 •	Along with this, a detailed ReadMe file includes screenshots of the output and the frame window. <br>
 
+### Python Libraries Used
+1. cv2 <br>
+2. mediapipe as mp <br>
+3. numpy as np <br>
+4. os <br>
+5. sklearn.model_selection.train_test_split <br>
+6. sklearn.ensemble.RandomForestClassifier <br>
+7. sklearn.neighbors.KNeighborsClassifier <br>
+8. sklearn.tree.DecisionTreeClassifier <br>
+9. sklearn.metrics.accuracy_score <br>
+10. joblib <br>
+
+
 ### Detailed Understanding about the code
 #### Data Selection
 To train the model with the proper frames extracted from videos, I have taken videos of different poses from websites like shutterstock and vector images. Around 15 videos was taken for each pose recorded in different angles so that the model can succesfully detect any pose without any hesitance. To differentiate between the poses I have made separate folders for each pose and provided that for the respective pose variable. 
