@@ -80,9 +80,9 @@ To train the model with the proper frames extracted from videos, I have taken vi
 This process is applicable for both model training and real-time detection.
 • For the model training, we defined a function that can process every single video. Once the function is called, it takes in the video from the video path. An empty list feature[] will be used to store the landmark values. We then check whether the model can process the video. If yes, then the process begins. First, a loop is created that processes every frame of the video. The frame is then converted to RGB and is processed by the pose class from mediapipe to detect any body landmarks. If the pose detects landmarks, then it begins extracting 15 different body landmarks. Once this is done, the model then flattens the vectors for the machine learning model to process. Now this will then be appended in the features[] list, and frame count increases by 1. This whole process is looped over all videos in the dataset. Finally, the dataset is split into a training and test set with a ratio of 80:20. <br>
 • For the real-time detection, a conditional statement about whether the frame is running or not is compiled. Then a loop runs over each frame. Similar landmarks are drawn after converting the frame to RGB. Then, the vectors are flattened, and predictions are made.
-![Screenshot 2024-11-11 114715] (https://github.com/user-attachments/assets/b466a2cb-0720-4b77-99a3-4289adffd8bf) <br>
+![Screenshot 2024-11-11 114715](https://github.com/user-attachments/assets/bf1259a6-e197-4bd5-98ca-0b983b3b532f) <br>
 (Figure 4: Code for Video Processing)
-![Screenshot 2024-11-11 114804] (https://github.com/user-attachments/assets/939c2f95-e1d4-4332-b9eb-f4a1cc700459) <br>
+![Screenshot 2024-11-11 114804](https://github.com/user-attachments/assets/557b67fa-ce57-420c-82d4-7e26bd8dde67) <br>
 (Figure 5: Code for Dataset Splitting and Processing)
 
 #### Model Selection and Training
@@ -100,9 +100,12 @@ Finally, the main code is the file where we load the pretrained model and begin 
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
-#### 1. Future Scope
+#### 1. Benefits
+• Provides additional safety for individuals prone to fainting, such as those with certain medical conditions, elderly individuals, or people recovering from surgeries. <br>
+• Offers around-the-clock monitoring without requiring the constant presence of a caregiver, making it ideal for home or assisted-living environments.
+#### 2. Future Scope
 This system can be made much better by introducing it in the public surveillance cameras and introducing vital systems so that the camera provides the recorded vitals when the person has fainted. Along with this, immediate ambulance services and increased accuracy can make the project better. 
-#### 2. Limitations
+#### 3. Limitations
 • Can only send a WhatsApp message as Twilio requires a subscription for calling services <br>
 • Not much detailed feature extraction and limited to only one person at a time <br>
 • Cannot completely differentiate between sleeping and fainting.
@@ -111,6 +114,6 @@ This system can be made much better by introducing it in the public surveillance
 While coding this faint detection system, I learnt about how Python can be used to code computer vision applications to create systems for fulfilling basic necessities in society. I also learnt about how to provide a proper dataset as all the videos were put in a list. So, the best videos were found by surfing through the internet. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
 
 ### Bibliography
-(No date) Mike Krieger: Computer vision and machine learning have... Available at: https://www.brainyquote.com/quotes/mike_krieger_752102 (Accessed: 11 November 2024). <br>
-Signs, causes, and treatment of syncope (fainting): Rwjbarnabas Health NJ (no date) RWJBarnabas Health. Available at: https://www.rwjbh.org/treatment-care/heart-and-vascular-care/diseases-conditions/syncope-fainting-/ (Accessed: 11 November 2024). <br>
-Syncope (fainting) (2020) Johns Hopkins Medicine. Available at: https://www.hopkinsmedicine.org/health/conditions-and-diseases/syncope-fainting (Accessed: 11 November 2024). 
+• (No date) Mike Krieger: Computer vision and machine learning have... Available at: https://www.brainyquote.com/quotes/mike_krieger_752102 (Accessed: 11 November 2024). <br>
+• Signs, causes, and treatment of syncope (fainting): Rwjbarnabas Health NJ (no date) RWJBarnabas Health. Available at: https://www.rwjbh.org/treatment-care/heart-and-vascular-care/diseases-conditions/syncope-fainting-/ (Accessed: 11 November 2024). <br>
+• Syncope (fainting) (2020) Johns Hopkins Medicine. Available at: https://www.hopkinsmedicine.org/health/conditions-and-diseases/syncope-fainting (Accessed: 11 November 2024). 
