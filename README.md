@@ -20,7 +20,8 @@ About 30–40% of adults experience a fall-related injury in their homes. Not on
 Looking at the statistics, I feel that this issue must be taken into deep consideration and addressed. Also, while addressing the issue, conditions like accuracy and quicker messaging must also be taken into consideration.
 
 ### Goal and Objective
-To develop a system that can detect a person standing, walking, sitting, and fainting. Along with this, the system should alert the closest family member if the model detects the target user facing a fainting episode.
+• To develop a system that can detect a person standing, sitting, and fainting. Along with this, the system should alert the closest family member if the model detects the target user facing a fainting episode.
+• To develop a heart rate detector using photoplethysmography that will detect the last recorded heart rate of a person after fainting
 
 ### Existing projects
 1. Wait Kit Wong: https://www.researchgate.net/publication/228792571_Home_Alone_Faint_Detection_Surveillance_System_Using_Thermal_Camera <br>
@@ -28,18 +29,18 @@ To develop a system that can detect a person standing, walking, sitting, and fai
 ### Approach
 Here is how the Software Development Life Cycle (SDLC) helped me create the faint detection system: - </br>
 #### 1. Planning: 
-Having discussed this with my teachers and family members, I found that there is a higher rate of injuries due to falling in homes and fainting that needs to be resolved. So, I thought of using computer vision to make a faint detection system that can detect four different poses: sitting, standing, walking, and fainting. Along with this, when fainting is detected, it will WhatsApp message the closest family member. I came up with this idea because my grandparents had recently met with two fainting episodes that my family feels need to be detected immediately and provide them immediate help before it becomes too late. Keeping this in mind, I generated a base problem statement with statistics, which will help me work on my project. I had first thought of detecting only fainting, but then I decided to even detect sitting, walking, and standing so that the accuracy of detecting fainting increases. <br>
+Having discussed this with my teachers and family members, I found that there is a higher rate of injuries due to falling in homes and fainting that needs to be resolved. So, I thought of using computer vision to make a faint detection system that can detect three different poses: sitting, standing, and fainting. Along with this, when fainting is detected, it will WhatsApp message the closest family member. I came up with this idea because my grandparents had recently met with two fainting episodes that my family feels need to be detected immediately and provide them immediate help before it becomes too late. Keeping this in mind, I generated a base problem statement with statistics, which will help me work on my project. I had first thought of detecting only fainting, but then I decided to even detect sitting, and standing so that the accuracy of detecting fainting increases. After researching about pose detection, I went through the concept of combining advanced computer vision techniques with photoplethysmography (ppg). This made me think about combining heart rate detection with faint detection so that the affected individual's vitals can also be recorded. <br>
  
 #### 2. Defining:-
-• Required Python computer vision, media pipe, and WhatsApp message coding experience. I learnt about it through many YouTube videos and websites like GeeksForGeeks, Java Tutorials, etc. <br>
+• Required Python computer vision, media pipe, scipy, and WhatsApp message coding experience. I learnt about it through many YouTube videos and websites like GeeksForGeeks, Java Tutorials, etc. <br>
 • Used websites like vector images and Shutterstock to download different sitting, standing, and fainting videos. Added 15 videos for each pose to increase accuracy. <br>
-• Asked ChatGPT to provide the different landmarks of the body to detect four different poses. <br>
-• Finally, understood the use of pywhatkit for the code to send the WhatsApp message to the provided number. This will be the final output of the code. <br>
+• Asked ChatGPT to provide the different landmarks of the body to detect three different poses. <br>
+• Finally, understood the use of pywhatkit and scipy.signal for the code to send the WhatsApp message to the provided number and record the heartbeat respectively. This will be the final output of the code. <br>
  
 #### 3. Designing: 
-• Began designing the faint detection. It is a working detection system that checks four different poses. If fainting is detected, then it sends a WhatsApp message to the given number saying that fainting has been detected. <br>
+• Began designing the faint detection. It is a working detection system that checks three different poses. If fainting is detected, then it sends a WhatsApp message to the given number saying that fainting has been detected along with the last recorded heartbeat. <br>
 • Designed a storyboard to express how this detection system can be beneficial and a requirement for all houses. <br>
-• Finally, design a flowchart to show the system process from the start to the end. <br>
+• Finally, designed a flowchart to show the system process from the start to the end. <br>
 ![image](https://github.com/user-attachments/assets/41718f8f-9709-4117-add2-2a955c31c8d2) <br>
 (Figure 2: Storyboard for the model, https://www.canva.com/)
 ![image](https://github.com/user-attachments/assets/2e43c485-0073-4831-9825-5c2d592049b2) <br>
@@ -70,6 +71,7 @@ Forms Response Sheet: https://docs.google.com/spreadsheets/d/171L4dBcxADU1JaSF3q
 #### 5. Model Deployment:
 • The entire code is uploaded to Github for the users to understand the code and gain insights from it. <br>
 • Along with this, a detailed ReadMe file includes screenshots of the output and the frame window. <br>
+• Finally, a presentation that gives a brief idea about my project.
 
 ### Detailed Understanding about the Code
 #### Data Selection
@@ -97,6 +99,9 @@ Once the data is trained, it is tested on the test dataset, and the accuracy is 
 #### Model Deployment
 Finally, the main code is the file where we load the pretrained model and begin detecting real-time poses. If there is a faint detected, the model uses PyWhatKit to immediately open WhatsApp and send a message to the provided number in the code. <br>
 
+### Heart Rate Detection
+This system uses the scipy library and signal package to detect the heart rate of a person based on changes in facial colour channels linked to the blood flow. Now this system is not 100% accurate but is a trial implementation. In the main loop, the face detection variable detects the colour intensity of the face in each frame. This draws an invisible line around the face that it uses for the calculation. Then a low-pass filter is coded that prevents any noise or abrupt changes in colour intensity, thereby smoothening the detection process. To minimise fluctuations and save memory storage, only the last 30 recorded frames will be appended to a list whose mean value is calculated to provide the normalised heart rate after every 2 seconds. 
+
 ### Screenshots of the Real Time Detection Code
 ![image](https://github.com/user-attachments/assets/4381b324-14bf-4e3a-aae1-5f22927b35a6)
 ![image](https://github.com/user-attachments/assets/b0e7e0ef-ad90-41f9-a099-cfc313fb5cff)
@@ -115,12 +120,13 @@ Finally, the main code is the file where we load the pretrained model and begin 
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
-#### 1. Benefits
+#### Benefits
 • Provides additional safety for individuals prone to fainting, such as those with certain medical conditions, elderly individuals, or people recovering from surgeries. <br>
 • Offers around-the-clock monitoring without requiring the constant presence of a caregiver, making it ideal for home or assisted-living environments.
-#### 2. Future Scope
-This system can be made much better by introducing it in the public surveillance cameras and introducing vital systems so that the camera provides the recorded vitals when the person has fainted. Along with this, immediate ambulance services and increased accuracy can make the project better. 
-#### 3. Limitations
+• Provides last recorded heart beat so that doctors can find out the cause of the faint easily.
+#### Future Scope
+This system can be made much better by introducing it in the public surveillance cameras as well as improving and adding new features to the vital systems so that the camera provides the accurate recorded vitals when the person has fainted. Along with this, immediate ambulance services and increased accuracy can make the project better. 
+#### Limitations
 • Can only send a WhatsApp message as Twilio requires a subscription for calling services <br>
 • Not much detailed feature extraction and limited to only one person at a time <br>
 • Cannot completely differentiate between sleeping and fainting.
