@@ -6,7 +6,6 @@ import os
 import joblib
 import pywhatkit as kit
 import mediapipe as mp
-import pyautogui
 
 # Initialize MediaPipe Face Detection and Pose Detection
 mp_face_detection = mp.solutions.face_detection
