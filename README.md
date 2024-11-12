@@ -1,5 +1,5 @@
 # Developing a Computer Vision-Based Detection System using Machine Learning
-## Scenario 2: Computer vision-based human pose detection system
+## Scenario 2: Computer Vision-Based Human Pose Detection System
 ## Name of the Project: Faint Detection System
 
 Student ID: 1000130 <br>
@@ -9,7 +9,7 @@ Email ID: karan.rajankar07@gmail.com </br>
 
 ### Introduction
 “Computer vision and machine learning have really started to take off, but for most people, the whole idea of what a computer sees when it's looking at an image is relatively obscure.” – Mike Krieger (Mike Krieger: Computer Vision and machine learning have...)</br>
-Computer vision is a field of artificial intelligence that derives insights from media like images and videos and can also access real-time data through web cameras. It is one of the booming technologies that AI engineers are working upon. It is used in autonomous vehicles, recognition systems, and robotics to provide computers with the eyes that they need for detecting entities. Combining human accident occurrences with computer vision can help detect and immediately call the necessary authorities, therefore making sure that the person receives aid on time. This report will be covering an application of computer vision that can detect a person fainting and send a message to the closest family member (considering that Twilio requires a fee to pay for calls, we have used Whatsapp as a mode of communication for our project).
+Computer vision is a field of artificial intelligence that derives insights from media like images and videos and can also access real-time data through web cameras. It is one of the booming technologies that AI engineers are working upon. It is used in autonomous vehicles, recognition systems, and robotics to provide computers with the eyes that they need for detecting entities. Combining human accident occurrences with computer vision can help detect and immediately call the necessary authorities, therefore making sure that the person receives aid on time. This report will be covering an application of computer vision that can detect a person fainting and send a message to the closest family member (considering that Twilio, a package used for calling services in python, requires a fee to pay for calls, we have used Whatsapp as a mode of communication for our project).
 
 ### Problem Definition
 Syncope is a type of condition where the blood flow slows down, becoming the cause of frequent fainting episodes (Signs, causes, and treatment of syncope (fainting): Rwjbarnabas Health NJ). For people staying alone, there is nobody to assist if the person faints, leading to late medications. The statistics below show that the syncope rate for adults is higher, especially in the older population. </br> 
@@ -49,6 +49,18 @@ Having discussed this with my teachers and family members, I found that there is
 • Started building my faint detection system on Visual Studio Code. <br>
 • Used modules like media pipe, pywhatkit, cv2, and sklearn to extract features from different training videos, trained a decision tree classifier model to increase the accuracy of the system, and sent an immediate WhatsApp message. <br>
 • Used CV2 in order to capture real-time frames and make this system functional in real time. <br>
+• Python Libraries Used: - <br>
+1. CV2: - To access webcamera for extracting real time information (Get started 2024)<br>
+2. mediapipe as mp: - To access body landmarks (Mediapipe)<br>
+3. numpy as np: - To flatten landmark vectors for the machine learning model to process (Numpy Introduction &amp; Guide for beginners 2024)<br>
+4. os: - To extract videos from the folder(W3schools.com)<br>
+5. sklearn.model_selection.train_test_split: - Split the dataset into training and test set (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
+6. sklearn.ensemble.RandomForestClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
+7. sklearn.neighbors.KNeighborsClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
+8. sklearn.tree. DecisionTreeClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
+9. sklearn.metrics.accuracy_score: - To check accuracy of the model and evaluate it (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
+10. joblib: - To store the model that can be accessed again without the need of processing it (Sharma, 2023)<br>
+
  
 #### 4. Testing:
 I tested my system by introducing it to my peers, teachers, and family members. They found the idea and the system quite interesting, and they all agreed that the system has a greater scope in the future. Finally, I introduced a feedback survey to make sure that the system was fulfilling the objective. <br>
@@ -59,19 +71,6 @@ Forms Response Sheet: https://docs.google.com/spreadsheets/d/171L4dBcxADU1JaSF3q
 • The entire code is uploaded to Github for the users to understand the code and gain insights from it. <br>
 • Along with this, a detailed ReadMe file includes screenshots of the output and the frame window. <br>
 
-### Python Libraries Used
-1. CV2: - To access webcamera for extracting real time information <br>
-2. mediapipe as mp: - To access body landmarks (Get started 2024)<br>
-3. numpy as np: - To flatten landmark vectors for the machine learning model to process (Numpy Introduction &amp; Guide for beginners 2024)<br>
-4. os: - To extract videos from the folder(W3schools.com)<br>
-5. sklearn.model_selection.train_test_split: - Split the dataset into training and test set (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
-6. sklearn.ensemble.RandomForestClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
-7. sklearn.neighbors.KNeighborsClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
-8. sklearn.tree. DecisionTreeClassifier: - Machine Learning Model (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
-9. sklearn.metrics.accuracy_score: - To check accuracy of the model and evaluate it (Learn: Machine learning in python - scikit-learn 0.16.1 documentation)<br>
-10. joblib: - To store the model that can be accessed again without the need of processing it (Sharma, 2023)<br>
-
-
 ### Detailed Understanding about the Code
 #### Data Selection
 To train the model with the proper frames extracted from videos, I have taken videos of different poses from websites like Shutterstock and vector images. Around 15 videos were taken for each pose recorded in different angles so that the model can successfully detect any pose without any hesitance. To differentiate between the poses, I have made separate folders for each pose and provided that for the respective pose variable. 
@@ -79,9 +78,9 @@ To train the model with the proper frames extracted from videos, I have taken vi
 #### Data preprocessing and exploratory data analysis (EDA)
 This process is applicable for both model training and real-time detection.
 • For the model training, we defined a function that can process every single video. Once the function is called, it takes in the video from the video path. An empty list feature[] will be used to store the landmark values. We then check whether the model can process the video. If yes, then the process begins. First, a loop is created that processes every frame of the video. The frame is then converted to RGB and is processed by the pose class from mediapipe to detect any body landmarks. If the pose detects landmarks, then it begins extracting 15 different body landmarks. Once this is done, the model then flattens the vectors for the machine learning model to process. Now this will then be appended in the features[] list, and frame count increases by 1. This whole process is looped over all videos in the dataset. Finally, the dataset is split into a training and test set with a ratio of 80:20. <br>
-• For the real-time detection, a conditional statement about whether the frame is running or not is compiled. Then a loop runs over each frame. Similar landmarks are drawn after converting the frame to RGB. Then, the vectors are flattened, and predictions are made. <br>
+• For the real-time detection, a conditional statement about whether the frame is running or not is compiled. Then a loop runs over each frame. Similar landmarks are drawn after converting the frame to RGB. Then, the vectors are flattened, and predictions are made. <br> <br>
 ![Screenshot 2024-11-11 114715](https://github.com/user-attachments/assets/bf1259a6-e197-4bd5-98ca-0b983b3b532f) <br><br>
-(Figure 4: Code for Video Processing)<br>
+(Figure 4: Code for Video Processing)<br> <br>
 ![Screenshot 2024-11-11 114804](https://github.com/user-attachments/assets/557b67fa-ce57-420c-82d4-7e26bd8dde67) <br><br>
 (Figure 5: Code for Dataset Splitting and Processing)
 
@@ -99,8 +98,20 @@ Once the data is trained, it is tested on the test dataset, and the accuracy is 
 Finally, the main code is the file where we load the pretrained model and begin detecting real-time poses. If there is a faint detected, the model uses PyWhatKit to immediately open WhatsApp and send a message to the provided number in the code. <br>
 
 ### Screenshots of the Real Time Detection Code
+![image](https://github.com/user-attachments/assets/4381b324-14bf-4e3a-aae1-5f22927b35a6)
+![image](https://github.com/user-attachments/assets/b0e7e0ef-ad90-41f9-a099-cfc313fb5cff)
+<br>
+(Figure 8: Importing Pose model, Machine Learning model, and Declaring variables) <br> <br>
+![image](https://github.com/user-attachments/assets/9e698fca-1af7-4286-b2f2-7e985158ce94) <br>
+(Figure 9: Function For Calculating Heart Rate) <br> <br>
+![image](https://github.com/user-attachments/assets/50907d60-b4fa-47f2-a7c0-b4ab45f3dd75) <br>
+(Figure 10: Flattening Vectors for Model Prediction and Probability Calculation) <br> <br>
+![image](https://github.com/user-attachments/assets/d7287a60-fd22-43ba-8e02-800904dce0ef) <br>
+(Figure 11: Loop for drawing landmarks)
 
 ### Screenshots of the Output
+![Screenshot 2024-11-12 111030](https://github.com/user-attachments/assets/ce38334f-e6c8-4fec-8243-d0c46cc3c533) <br>
+(Figure 12: Model Accuracies)
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
@@ -128,4 +139,5 @@ https://www.canva.com/design/DAGWJt5h7O0/W7nnbCF_XAAMC00j8nf63A/view?utm_content
 • https://www.analyticsvidhya.com/blog/2023/02/how-to-save-and-load-machine-learning-models-in-python-using-joblib-library/ (Accessed: 12 November 2024). 
 • Signs, causes and treatment of syncope (fainting): Rwjbarnabas Health NJ (no date) RWJBarnabas Health. Available at: https://www.rwjbh.org/treatment-care/heart-and-vascular-care/diseases-conditions/syncope-fainting-/ (Accessed: 11 November 2024). 
 • Syncope (fainting) (2020) Johns Hopkins Medicine. Available at: https://www.hopkinsmedicine.org/health/conditions-and-diseases/syncope-fainting (Accessed: 11 November 2024). 
+• Mediapipe (no date) PyPI. Available at: https://pypi.org/project/mediapipe/ (Accessed: 12 November 2024). 
 • W3schools.com (no date) W3Schools Online Web Tutorials. Available at: https://www.w3schools.com/python/module_os.asp (Accessed: 12 November 2024). 
