@@ -122,7 +122,8 @@ This system uses the scipy library and signal package to detect the heart rate o
 (Figure 13: Sitting Pose Detection) <br>
 ![Screenshot 2024-11-13 135854](https://github.com/user-attachments/assets/fc86964d-1434-4c5d-a54d-ecf0d24eb80f) <br>
 (Figure 14: Standing Pose Detection) <br>
-![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/b90fc411-5669-470a-aaaa-470e6a95bb5c)![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) <br>
+![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/b90fc411-5669-470a-aaaa-470e6a95bb5c)![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) ![Screenshot 2024-11-13 141727](https://github.com/user-attachments/assets/0ba5e580-b2f2-4572-a540-790c971168c8)
+<br>
 (Figure 15: Fainting Pose Detection and WhatsApp Message Sent)
 
 ### Monitoring and Maintenance
