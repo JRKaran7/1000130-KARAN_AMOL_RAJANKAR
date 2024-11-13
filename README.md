@@ -1,4 +1,5 @@
-# Developing a Computer Vision-Based Detection System using Machine Learning
+# Machine Learning and Deep Learning
+## Developing a Computer Vision-Based Detection System using Machine Learning
 ## Scenario 2: Computer Vision-Based Human Pose Detection System
 ## Name of the Project: Faint Detection System
 
@@ -120,19 +121,19 @@ This system uses the scipy library and signal package to detect the heart rate o
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
-#### Limitations
+### Limitations
 • Can only send a WhatsApp message as Twilio requires a subscription for calling services <br>
 • Not much detailed feature extraction and limited to only one person at a time <br>
 • Cannot completely differentiate between sleeping and fainting.
-#### Benefits
+### Benefits
 • Provides additional safety for individuals prone to fainting, such as those with certain medical conditions, elderly individuals, or people recovering from surgeries. <br>
 • Offers around-the-clock monitoring without requiring the constant presence of a caregiver, making it ideal for home or assisted-living environments.
 • Provides last recorded heart beat so that doctors can find out the cause of the faint easily.
-#### Future Scope
+### Future Scope
 This system can be made much better by introducing it in the public surveillance cameras as well as improving and adding new features to the vital systems so that the camera provides the accurate recorded vitals when the person has fainted. Along with this, immediate ambulance services and increased accuracy can make the project better. 
 
 ### Conclusion
-While coding this faint detection system, I learnt about how Python can be used to code computer vision applications to create systems for fulfilling basic necessities in society. I also learnt about how to provide a proper dataset as all the videos were put in a list. So, the best videos were found by surfing through the internet. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
+While coding this faint detection system, I learnt about how Python can be used to code computer vision applications to create systems for fulfilling basic necessities in society. I also learnt about how to provide a proper dataset as all the videos were put in a list. So, the best videos were found by surfing through the internet. Coding with different libraries like mediapipe and scikit learn helped me understand advanced computer vision techniques and how to implement them with machine learning. Along with this, the use of the signal library under the SciPY package and researching about this led to the creation of a heart rate detection system that I felt is not possible to do without any sensors. The use of photoplethysmography helped me integrate the use of vitals in my faint detection system. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
 
 ### PPT Link
 https://www.canva.com/design/DAGWJt5h7O0/W7nnbCF_XAAMC00j8nf63A/view?utm_content=DAGWJt5h7O0&utm_campaign=designshare&utm_medium=link&utm_source=editor
