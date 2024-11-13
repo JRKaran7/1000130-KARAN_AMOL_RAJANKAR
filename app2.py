@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import time
 import threading
-import os
 import joblib
 import pywhatkit as kit
 import mediapipe as mp
@@ -141,7 +140,7 @@ while cap.isOpened():
         prob_standing = prediction_prob[0][3] * 100
 
 
-        faint_detected = prob_faint > 80
+        faint_detected = prob_faint > 90
         
 
         # Display probabilities for each detected pose
@@ -156,7 +155,7 @@ while cap.isOpened():
             break
         elif prob_sitting > 90:
             cv2.putText(frame, 'Sitting Detected!', (50, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 0), 2)
-        elif prob_standing > 7:
+        elif prob_standing > 5:
             cv2.putText(frame, 'Standing Detected!', (50, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2)
 
         # Draw pose landmarks
