@@ -86,7 +86,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
-# Step 3.1.2: Evaluate the Random Forest classifier model
+# Step 3.1.2: Evaluate the model
 y_pred = clf.predict(X_test)
 acc1 = accuracy_score(y_test, y_pred)
 print(f'Random Forest Classifier Accuracy: {acc1}')
@@ -95,7 +95,7 @@ print(f'Random Forest Classifier Accuracy: {acc1}')
 knn = KNeighborsClassifier()
 knn.fit(X_train, y_train)
 
-# Step 3.2.2: Evaluate the KNN classifier model
+# Step 3.2.2: Evaluate the model
 y_pred = knn.predict(X_test)
 acc2 = accuracy_score(y_test, y_pred)
 print(f'KNN Classifier Accuracy: {acc2}')
@@ -104,12 +104,12 @@ print(f'KNN Classifier Accuracy: {acc2}')
 dtc = DecisionTreeClassifier()
 dtc.fit(X_train, y_train)
 
-# Step 3.3.2: Evaluate the Decision Tree classifier model
+# Step 3.3.2: Evaluate the model
 y_pred = dtc.predict(X_test)
 acc3 = accuracy_score(y_test, y_pred)
 print(f'Decision Tree Classifier Accuracy: {acc3}')
 
-# Step 5: Comparing the accuracy of the three models and saving the most accurate one
+# Step 5: Save the trained model
 if acc1 >= acc2 and acc1 >= acc3:
     print('Random Forest Classifier model loaded successfully')
     joblib.dump(clf, 'modelok.pkl')
@@ -120,4 +120,4 @@ elif acc3 >= acc1 and acc3 >= acc2:
     print('Decision Tree Classifier model loaded successfully')
     joblib.dump(dtc, 'modelok.pkl')
 else:
-    print('No model suits the data') # Default case
+    print('No model suits the data')
