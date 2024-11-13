@@ -117,7 +117,13 @@ This system uses the scipy library and signal package to detect the heart rate o
 
 ### Screenshots of the Output
 ![Screenshot 2024-11-12 111030](https://github.com/user-attachments/assets/ce38334f-e6c8-4fec-8243-d0c46cc3c533) <br>
-(Figure 12: Model Accuracies)
+(Figure 12: Model Accuracies) <br>
+![Screenshot 2024-11-13 135755](https://github.com/user-attachments/assets/26136d5d-b9cf-43aa-8b35-4586ba74c55a) <br>
+(Figure 13: Sitting Pose Detection) <br>
+![Screenshot 2024-11-13 135854](https://github.com/user-attachments/assets/fc86964d-1434-4c5d-a54d-ecf0d24eb80f) <br>
+(Figure 14: Standing Pose Detection) <br>
+![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/b90fc411-5669-470a-aaaa-470e6a95bb5c)![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) <br>
+(Figure 15: Fainting Pose Detection and WhatsApp Message Sent)
 
 ### Monitoring and Maintenance
 Now that we have deployed the model, it is to be monitored to prevent false alarms and continuously update the training data to increase accuracy. Once we get a deeper understanding about advanced computer vision, I would continue to integrate this model with hardware devices to make it a fully functional product. But monitoring it will prevent any issues arising in the code.
