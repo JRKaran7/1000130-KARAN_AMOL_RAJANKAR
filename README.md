@@ -116,13 +116,19 @@ This system uses the scipy library and signal package to detect the heart rate o
 (Figure 11: Loop for drawing landmarks)
 
 ### Screenshots of the Output
+(Note that the probabilities of the poses are not dependent on each other) <br>
+1. Standing Threshold Probability: 5 % <br>
+2. Sitting Threshold Probability: 90 % <br>
+3. Faint Threshold Probability: 85 % <br>
+(The model must detect a value greater than these threshold values to detect the respective pose) <br>
 ![Screenshot 2024-11-12 111030](https://github.com/user-attachments/assets/ce38334f-e6c8-4fec-8243-d0c46cc3c533) <br>
 (Figure 12: Model Accuracies) <br>
 ![Screenshot 2024-11-13 135755](https://github.com/user-attachments/assets/26136d5d-b9cf-43aa-8b35-4586ba74c55a) <br>
 (Figure 13: Sitting Pose Detection) <br>
 ![Screenshot 2024-11-13 135854](https://github.com/user-attachments/assets/fc86964d-1434-4c5d-a54d-ecf0d24eb80f) <br>
 (Figure 14: Standing Pose Detection) <br>
-![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/b90fc411-5669-470a-aaaa-470e6a95bb5c)![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) ![Screenshot 2024-11-13 141727](https://github.com/user-attachments/assets/0ba5e580-b2f2-4572-a540-790c971168c8)
+![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/024e0f05-b724-4481-a14e-f20d2caaf8f3)
+![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) ![Screenshot 2024-11-13 141727](https://github.com/user-attachments/assets/0ba5e580-b2f2-4572-a540-790c971168c8)
 <br>
 (Figure 15: Fainting Pose Detection and WhatsApp Message Sent)
 
