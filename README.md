@@ -1,5 +1,5 @@
-# Machine Learning and Deep Learning
-## Developing a Computer Vision-Based Detection System using Machine Learning
+# Subject Name: Machine Learning and Deep Learning
+## Assignment Title: Developing a Computer Vision-Based Detection System using Machine Learning
 ## Scenario 2: Computer Vision-Based Human Pose Detection System
 ## Name of the Project: Faint Detection System
 
