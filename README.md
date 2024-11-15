@@ -159,13 +159,22 @@ Coding with different libraries like Mediapipe and Scikit Learn helped me unders
 ### PPT Link
 https://www.canva.com/design/DAGWJt5h7O0/W7nnbCF_XAAMC00j8nf63A/view?utm_content=DAGWJt5h7O0&utm_campaign=designshare&utm_medium=link&utm_source=editor
 ### Bibliography
-• (No date) Mike Krieger - Computer Vision and machine learning have... Available at: https://www.brainyquote.com/quotes/mike_krieger_752102 (Accessed: 11 November 2024). 
+• (No date) Mike Krieger - Computer Vision and machine learning have... Available at: https://www.brainyquote.com/quotes/mike_krieger_752102 (Accessed: 11 November 2024).<br>
 • GeeksforGeeks (2024) Numpy Introduction & Guide for beginners, GeeksforGeeks. Available at: https://www.geeksforgeeks.org/introduction-to-numpy/ (Accessed: 12 November 2024). 
+<br>
 • Get started (2024) OpenCV. Available at: https://opencv.org/get-started/ (Accessed: 12 November 2024). 
+<br>
 • Learn: Machine learning in python - scikit-learn 0.16.1 documentation (no date) scikit. Available at: https://scikit-learn.org/ (Accessed: 12 November 2024). 
+<br>
 • Sharma, P. (2023) How to save and Load Machine Learning Models in python using Joblib library?, Analytics Vidhya. Available at:
+<br>
 • https://www.analyticsvidhya.com/blog/2023/02/how-to-save-and-load-machine-learning-models-in-python-using-joblib-library/ (Accessed: 12 November 2024). 
+<br>
 • Signs, causes and treatment of syncope (fainting): Rwjbarnabas Health NJ (no date) RWJBarnabas Health. Available at: https://www.rwjbh.org/treatment-care/heart-and-vascular-care/diseases-conditions/syncope-fainting-/ (Accessed: 11 November 2024). 
+<br>
 • Syncope (fainting) (2020) Johns Hopkins Medicine. Available at: https://www.hopkinsmedicine.org/health/conditions-and-diseases/syncope-fainting (Accessed: 11 November 2024). 
+<br>
 • Mediapipe (no date) PyPI. Available at: https://pypi.org/project/mediapipe/ (Accessed: 12 November 2024). 
+<br>
 • W3schools.com (no date) W3Schools Online Web Tutorials. Available at: https://www.w3schools.com/python/module_os.asp (Accessed: 12 November 2024). 
+<br>
