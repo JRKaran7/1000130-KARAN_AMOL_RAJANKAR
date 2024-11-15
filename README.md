@@ -126,7 +126,7 @@ This system uses the scipy library and signal package to detect the heart rate o
 2. Sitting Threshold Probability: 90 % <br>
 3. Faint Threshold Probability: 85 % <br>
 (The model must detect a value greater than these threshold values to detect the respective pose) <br> <br>
-![Screenshot 2024-11-12 111030](https://github.com/user-attachments/assets/ce38334f-e6c8-4fec-8243-d0c46cc3c533) <br>
+![image](https://github.com/user-attachments/assets/ae072d8e-7483-4b27-9a01-7d1c06bfc6b5) <br>
 (Figure 12: Model Accuracies) <br> <br>
 ![Screenshot 2024-11-13 135755](https://github.com/user-attachments/assets/26136d5d-b9cf-43aa-8b35-4586ba74c55a) <br>
 (Figure 13: Sitting Pose Detection) <br> <br>
@@ -134,9 +134,9 @@ This system uses the scipy library and signal package to detect the heart rate o
 (Figure 14: Standing Pose Detection) <br> <br>
 ![Screenshot 2024-11-13 140445](https://github.com/user-attachments/assets/024e0f05-b724-4481-a14e-f20d2caaf8f3) <br>
 (Figure 15: - Fainting Pose Detection) <br> <br>
-![Screenshot 2024-11-13 140509](https://github.com/user-attachments/assets/4deac1d6-e40e-40d1-96f5-92bbc0d7d29d) <br>
+![image](https://github.com/user-attachments/assets/7e0ce8e2-7106-4732-99b3-35141ba5bc74) <br>
 (Figure 16: WhatsApp Message Sent) <br> <br>
-![Screenshot 2024-11-13 141727](https://github.com/user-attachments/assets/0ba5e580-b2f2-4572-a540-790c971168c8) <br>
+![image](https://github.com/user-attachments/assets/f2daeb6b-69dc-4991-9e11-3868bef07665) <br>
 (Figure 16: Output Screen)
 
 ### Monitoring and Maintenance
