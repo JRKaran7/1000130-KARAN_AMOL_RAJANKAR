@@ -15,7 +15,7 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 
 # Initialize OpenCV Video Capture
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 # Load pre-trained model for fainting detection
 model = joblib.load('modelok.pkl')
