@@ -70,7 +70,6 @@ faint_videos = extract_dataset_features('faint', 1)
 not_fainting = extract_dataset_features('not_fainting', 0)
 sitting_videos = extract_dataset_features('sitting', 2)
 standing_videos = extract_dataset_features('standing', 3)
-walking_videos = extract_dataset_features('walking', 4)
 
 # Combine all features and labels
 dataset = faint_videos + not_fainting + sitting_videos + standing_videos
