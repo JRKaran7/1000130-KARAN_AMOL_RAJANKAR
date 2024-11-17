@@ -37,10 +37,10 @@ After discussing with my teachers and family members, I found out that there is 
 Keeping this in mind, I generated a base problem statement with statistics, that helped me work on my project. I had first thought of detecting only fainting, but then I decided to even detect sitting and standing so that the accuracy of detecting fainting increases. After researching about pose detection, I went through the concept of combining advanced computer vision techniques with photoplethysmography (ppg). This made me think about combining heart rate detection with faint detection so that the affected individual's vitals can also be recorded. <br>
 
 #### 2. Defining:-
-• Required Python Computer Vision, Mediapipe, SciPY, and WhatsApp message coding experience. I learnt about it through many YouTube videos and websites like GeeksForGeeks, Java Tutorials, etc. <br>
+• Required Python Computer Vision, Mediapipe, and WhatsApp message coding experience. I learnt about it through many YouTube videos and websites like GeeksForGeeks, Java Tutorials, etc. <br>
 • Used websites like vector images and Shutterstock to download different sitting, standing, and fainting videos. Added 10 videos for each pose to increase accuracy. <br>
 • Asked ChatGPT to provide the different landmarks of the body to detect three different poses. <br>
-• Finally, understood the use of pywhatkit and scipy.signal for the code to send the WhatsApp message to the provided number and record the heartbeat respectively. This will be the final output of the code. <br>
+• Finally, understood the use of pywhatkit and advanced computer vision techniques for the code to send the WhatsApp message to the provided number and record the heartbeat respectively. This will be the final output of the code. <br>
  
 #### 3. Designing: 
 • Began designing the faint detection. It is a working detection system that checks three different poses. If fainting is detected, then it sends a WhatsApp message to the given number saying that fainting has been detected along with the last recorded heartbeat. <br>
@@ -106,7 +106,7 @@ Once the data is trained, it is tested on the test dataset, and the accuracy is 
 Finally, the main code is the file where we load the pretrained model and begin detecting real-time poses. If there is a faint detected, the model uses PyWhatKit to immediately open WhatsApp and send a message that also includes the last recorded heart rate to the provided number in the code. <br>
 
 ### Heart Rate Detection
-This system uses the scipy library and signal package to detect the heart rate of a person based on changes in facial colour channels linked to the blood flow. Now this system is not 100% accurate but is a trial implementation. In the main loop, the face detection variable detects the colour intensity of the face in each frame. This draws an invisible line around the face that it uses for the calculation. Then a low-pass filter is coded that prevents any noise or abrupt changes in colour intensity, thereby smoothening the detection process. To minimise fluctuations and save memory storage, only the last 30 recorded frames will be appended to a list whose mean value is calculated to provide the normalised heart rate after every 2 seconds. 
+This system uses mediapipe and advanced computer vision techniques to detect the heart rate of a person based on changes in facial colour channels linked to the blood flow. Now this system is not 100% accurate but is a trial implementation. In the main loop, the face detection variable detects the colour intensity of the face in each frame. This draws an invisible line around the face that it uses for the calculation. Then a low-pass filter is coded that prevents any noise or abrupt changes in colour intensity, thereby smoothening the detection process. To minimise fluctuations and save memory storage, only the last 30 recorded frames will be appended to a list whose mean value is calculated to provide the normalised heart rate after every 2 seconds. 
 
 ### Screenshots of the Real Time Detection Code
 ![image](https://github.com/user-attachments/assets/4381b324-14bf-4e3a-aae1-5f22927b35a6)
@@ -154,7 +154,7 @@ This system can be made much better by introducing it in the public surveillance
 
 ### Conclusion
 While coding this faint detection system, I learnt about how Python can be used to code computer vision applications to create systems for fulfilling basic necessities in society. I also learnt about how to provide a proper dataset as all the videos were put in a list. So, the best videos were found by surfing through the internet. <br>
-Coding with different libraries like Mediapipe and Scikit Learn helped me understand advanced computer vision techniques and how to implement them with machine learning. Along with this, the use of the signal library under the SciPY package and researching about this led to the creation of a heart rate detection system that I felt was not possible to do without any sensors. The use of photoplethysmography helped me integrate the use of vitals in my faint detection system. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
+Coding with different libraries like Mediapipe and Scikit Learn helped me understand advanced computer vision techniques and how to implement them with machine learning. Along with this, researching about the colour channels and different methods led to the creation of a heart rate detection system that I felt was not possible to do without any sensors. The use of photoplethysmography helped me integrate the use of vitals in my faint detection system. Finally, the discussion with peers, family members, and my teachers not only developed my communication skills, but they also gave me ideas and suggestions on how I can make my faint detection system better.
 
 ### PPT Link
 https://www.canva.com/design/DAGWJt5h7O0/W7nnbCF_XAAMC00j8nf63A/view?utm_content=DAGWJt5h7O0&utm_campaign=designshare&utm_medium=link&utm_source=editor
